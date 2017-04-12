@@ -1,6 +1,6 @@
 
 module.exports = {
-  entry: '.app.js',
+  entry: './app.js',
 
   output: {
     // path: 'build',
@@ -13,7 +13,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: 'babel-loader'
+        loaders: ['react-hot-loader', 'babel-loader']
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
 
     ]
